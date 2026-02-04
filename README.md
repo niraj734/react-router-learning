@@ -83,11 +83,4 @@ We use `<Link>` instead of `<a>` in React.
 
 ---
 
-## 7. `<a>` vs `<Link>`
-
-### With `<a>` tag:
-- Uses the `href` attribute
-- Example:
-  ```html
-  <a href="/about">About</a>
 
