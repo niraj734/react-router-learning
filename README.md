@@ -1,16 +1,86 @@
-# React + Vite
+# React Router
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Capturing Parameters from the URL
+React Router allows us to capture dynamic parameters from the URL and use them inside components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 2. React Router is Not Part of Core React
+React Router is **not part of core React**.  
+It is a **third-party library** that must be installed separately.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 3. Official Website
+Always refer to the **official React Router documentation** for accurate and updated information.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 4. What is React Router?
+
+React Router ≠ a separate app or tool.
+
+It is:
+- A library
+- Written in JavaScript
+- Used inside React code
+
+Just like:
+- `axios` → HTTP requests  
+- `react-hook-form` → forms  
+- `react-router-dom` → routing  
+
+---
+
+## 5. React vs React Router (Library Concept)
+
+### React itself is a library
+React provides functionalities to reduce code and make UI development easier, such as:
+- `useState`
+- `useEffect`
+- `useContext`
+- Other hooks
+
+### React Router is also a library
+The goal of a library is:
+- To reduce our code
+- To handle common problems
+- To provide ready-made functionality
+
+React Router solves the **routing problem** in React applications.
+
+It provides:
+- `<Link>` → navigation without page reload
+- `<NavLink>` → navigation with active state
+- `<Routes>` → define route mappings
+- `<Route>` → map URL to component
+- `useParams` → read URL parameters
+- `useNavigate` → programmatic navigation
+
+---
+
+## 6. Why We Don’t Use `<a>` Tag in React
+
+We don’t use the `<a>` tag for navigation because it reloads the entire page.
+
+When a page reload happens:
+- The whole DOM is destroyed
+- A new DOM tree is created
+- JavaScript state is lost
+
+React works differently:
+- React is a SPA (Single Page Application)
+- The page does NOT reload
+- React updates only the required parts of the UI
+- It uses Virtual DOM and diffing algorithm
+- Only changed nodes are updated in the real DOM
+
+So in React:
+- `<a href="">` → full page reload 
+- `<Link to="">` → client-side navigation without reload  
+
+We use `<Link>` instead of `<a>` in React.
+
+---
+
+
