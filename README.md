@@ -79,7 +79,7 @@ So in React:
 - `<a href="">` → full page reload 
 - `<Link to="">` → client-side navigation without reload  
 
-We use `<Link>` instead of `<a>` in React.
+We use `<Link>` instead of `<a>`in React.
 
 ---
 
