@@ -3,12 +3,14 @@
 import './App.css'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
+import Home from './Components/HOME/Home'
 function App() {
   
 
   return (
     <>
       <Header/>
+      <Home/>
       <Footer/>
     </>
   )
