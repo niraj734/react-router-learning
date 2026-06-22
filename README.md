@@ -66,6 +66,21 @@ We don’t use the `<a>` tag for navigation because it reloads the entire page.
 When a page reload happens:
 - The whole DOM is destroyed
 - A new DOM tree is created
+
+- React works differently:
+- React is a SPA (Single Page Application)
+- The page does NOT reload
+- React updates only the required parts of the UI
+- It uses Virtual DOM and diffing algorithm
+- Only changed nodes are updated in the real DOM
+
+So in React:
+- `<a href="">` → full page reload 
+- `<Link to="">` → client-side navigation without reload  
+
+We use `<Link>` instead of `<a>`in React.
+
+---
 - JavaScript state is lost
 
 
